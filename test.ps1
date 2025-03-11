@@ -1,7 +1,7 @@
 # Configurações
 $REPO_NAME="appoficina24"
 $AWS_REGION="us-east-1"
-$ACCOUNT_ID="370882636449"
+$ACCOUNT_ID="339603715759"
 
 # Obter todas as tags de versão, ignorando 'latest' e mantendo apenas as versões numéricas
 $LATEST_VERSIONS = aws ecr list-images --region $AWS_REGION --repository-name $REPO_NAME --query 'imageIds[*].imageTag' --output text | ` Where-Object { $_ -match '^v[0-9]+' }

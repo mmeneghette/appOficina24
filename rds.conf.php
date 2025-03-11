@@ -1,1 +1,1 @@
-<?php $RDS_URL='appoficina24.cicxmpkzvyv5.us-east-1.rds.amazonaws.com'; $RDS_DB='appoficina24'; $RDS_user='siq'; $RDS_pwd='f]S>?ZcCV?XhUghj-iVk2)8pP-Ba'; $AFF_NUM='1'; ?>
+<?php $RDS_URL='mysql-siqhml01.cm0nugovfho6.us-east-1.rds.amazonaws.com'; $RDS_DB='appoficina24'; $RDS_user='siq'; $RDS_pwd='OlzR>wS!-k>IYg_2h|oSo]xTkxWd'; $AFF_NUM='1'; ?>
