@@ -25,7 +25,8 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - echo "{\"ImageURI\":\"$REPOSITORY_URI:$IMAGE_TAG\"}" > imageDefinition.json
+      - echo "[{\"name\":\"meu-container\",\"imageUri\":\"$REPOSITORY_URI:$IMAGE_TAG\"}]" > imageDefinition.json
+      - cat imageDefinition.json
       - aws ecs update-service --cluster $ECS_CLUSTER --service $ECS_SERVICE --force-new-deployment
 
 artifacts:
