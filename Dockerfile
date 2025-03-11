@@ -1,5 +1,6 @@
 # Usa a imagem oficial do PHP com Apache
-FROM php:8.1-apache
+#FROM php:8.1-apache
+FROM 339603715759.dkr.ecr.us-east-1.amazonaws.com/php:latest
 
 # Habilita extensões PHP necessárias
 RUN docker-php-ext-install mysqli pdo pdo_mysql
