@@ -2,9 +2,12 @@ $REPO_NAME="appoficina24"
 $AWS_REGION="us-east-1"
 $ACCOUNT_ID="339603715759"
 
-$NEW_VERSION = "v2"
+$NEW_VERSION = "v1"
 
 Write-Host "Nova versão: $NEW_VERSION"
+
+# Autenticar no ECR
+aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin "$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com"
 
 # Construir a nova imagem
 docker build -t $REPO_NAME`:latest -t $REPO_NAME`:$NEW_VERSION .
@@ -12,9 +15,6 @@ docker build -t $REPO_NAME`:latest -t $REPO_NAME`:$NEW_VERSION .
 # Criar tags no ECR
 docker tag $REPO_NAME`:$NEW_VERSION "$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$REPO_NAME`:$NEW_VERSION"
 docker tag $REPO_NAME`:latest "$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$REPO_NAME`:latest"
-
-# Autenticar no ECR
-aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin "$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com"
 
 # Fazer o push das imagens
 docker push "$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$REPO_NAME`:$NEW_VERSION"
