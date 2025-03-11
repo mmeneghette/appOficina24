@@ -6,7 +6,7 @@ FROM 339603715759.dkr.ecr.us-east-1.amazonaws.com/php:latest
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 # Habilita o módulo de reescrita do Apache (caso necessário)
-RUN a2enmod rewrite
+#RUN a2enmod rewrite
 
 WORKDIR /var/www/html
 
