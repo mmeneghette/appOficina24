@@ -9,10 +9,10 @@
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"  style="background-color:#000">
   <ul class="nav navbar-nav" style="padding:5px 0 5px 0" >
     <li class="list-group-item" style="background-color:#555;border:2px solid #000">
-      <a class=".text-white" style="color:blue" href="index.php">Principal</a>
+      <a class=".text-white" style="color:red" href="index.php">Principal</a>
     </li>
     <li class="list-group-item" style="background-color:#555 ; border:2px solid #000">
-        <a class=".text-white" style="color:#fff" href="load.php"><b>CPU</b></a>
+        <a class=".text-white" style="color:red href="load.php"><b>CPU</b></a>
     </li>
     <li class="list-group-item" style="background-color:#555;border:2px solid #000">
       <a class=".text-white" style="color:#fff" href="rds.php">Banco de Dados</a>
