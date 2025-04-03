@@ -19,7 +19,6 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
       <div class="jumbotron" style="background-color:#555; color:#fff">
       <p>
       <?php include("get-index-meta-data.php"); ?>
-      <?php include('get-docker.php'); ?>
       <?php include('get-cpu-load.php'); ?>
       <?php echo exec('service codedeploy-agent restart > /dev/null &'); ?> 
       </p>
